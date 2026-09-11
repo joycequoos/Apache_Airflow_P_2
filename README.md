@@ -1,166 +1,166 @@
 # Astro Python SDK
 
-[← Voltar a Engenharia de Dados](https://github.com/joycequoos/Data_Enginer/blob/main/README.md)
+[← Back to Data Engineering](https://github.com/joycequoos/Data_Enginer/blob/main/README.md)
 
-Guia de referência sobre o **Astro Python SDK**, o **Astro CLI** e como eles se relacionam com o Apache Airflow no desenvolvimento de pipelines ETL.
+Reference guide on the **Astro Python SDK**, the **Astro CLI**, and how they relate to Apache Airflow in ETL pipeline development.
 
-## Índice
+## Table of Contents
 
-- [O que é o Astro Python SDK](#o-que-é-o-astro-python-sdk)
-- [Características principais](#características-principais)
-- [Como, quando e por que surgiu](#como-quando-e-por-que-surgiu)
-- [Licença](#licença)
-- [Instalação do Astro CLI](#instalação-do-astro-cli)
-- [Astro Python SDK no desenvolvimento de ETL](#astro-python-sdk-no-desenvolvimento-de-etl)
-- [Referências](#referências)
+- [What the Astro Python SDK Is](#what-the-astro-python-sdk-is)
+- [Main Characteristics](#main-characteristics)
+- [How, When, and Why It Came About](#how-when-and-why-it-came-about)
+- [License](#license)
+- [Installing the Astro CLI](#installing-the-astro-cli)
+- [The Astro Python SDK in ETL Development](#the-astro-python-sdk-in-etl-development)
+- [References](#references)
 
 ---
 
-## O que é o Astro Python SDK?
+## What the Astro Python SDK Is
 
-O Astro Python SDK é uma biblioteca desenvolvida pela **Astronomer** para facilitar o uso do **Astro**, um ambiente de orquestração de dados e workflows construído sobre o Apache Airflow. Ele permite que desenvolvedores integrem e interajam com as funcionalidades do Astro diretamente em projetos Python, com uma interface mais simples do que trabalhar diretamente com a API do Airflow.
+The Astro Python SDK is a library developed by **Astronomer** to make it easier to use **Astro**, a data and workflow orchestration environment built on top of Apache Airflow. It allows developers to integrate and interact with Astro's features directly in Python projects, with a simpler interface than working directly with the Airflow API.
 
-> A Astronomer é a empresa por trás da distribuição comercial do Apache Airflow, oferecendo ferramentas e serviços que simplificam seu uso em ambientes corporativos.
+> Astronomer is the company behind the commercial distribution of Apache Airflow, offering tools and services that simplify its use in enterprise environments.
 
-## Características principais
+## Main Characteristics
 
-| Característica | Descrição |
+| Characteristic | Description |
 |---|---|
-| **Orquestração de workflows** | Facilita a criação, execução e monitoramento de pipelines de dados complexos. |
-| **Integração com fontes de dados** | Suporta bancos SQL, sistemas de arquivos, APIs e outras fontes de forma padronizada. |
-| **Automação de tarefas** | Automatiza tarefas repetitivas de manipulação, transformação e movimentação de dados. |
-| **Interface simplificada** | Reduz a complexidade de escrever DAGs "puras" do Airflow para tarefas comuns de ETL. |
-| **Conectividade e extensibilidade** | Suporta conectores adicionais, permitindo estender as capacidades do Astro conforme a necessidade. |
+| **Workflow orchestration** | Makes it easier to create, run, and monitor complex data pipelines. |
+| **Integration with data sources** | Supports SQL databases, file systems, APIs, and other sources in a standardized way. |
+| **Task automation** | Automates repetitive data manipulation, transformation, and movement tasks. |
+| **Simplified interface** | Reduces the complexity of writing "pure" Airflow DAGs for common ETL tasks. |
+| **Connectivity and extensibility** | Supports additional connectors, allowing Astro's capabilities to be extended as needed. |
 
-O uso do SDK tende a aumentar a produtividade de desenvolvedores e engenheiros de dados, permitindo focar mais em análise e obtenção de insights do que na complexidade de orquestração.
+Using the SDK tends to increase the productivity of developers and data engineers, allowing them to focus more on analysis and gaining insights rather than on orchestration complexity.
 
-## Como, quando e por que surgiu
+## How, When, and Why It Came About
 
-**Como surgiu**
-Foi criado para oferecer uma interface mais simples e programática para quem trabalha com orquestração de dados no Apache Airflow, reduzindo a complexidade associada ao uso direto da API do Airflow para escrever DAGs.
+**How it came about**
+It was created to offer a simpler, more programmatic interface for people working with data orchestration in Apache Airflow, reducing the complexity associated with using the Airflow API directly to write DAGs.
 
-**Quando surgiu**
-Não há uma data exata de lançamento amplamente documentada, mas o SDK foi desenvolvido nos últimos anos, à medida que cresceu a demanda por ferramentas de orquestração mais amigáveis. A Astronomer atua no ecossistema Airflow desde sua fundação, em 2018, e o SDK é parte desse esforço contínuo.
+**When it came about**
+There isn't a widely documented exact release date, but the SDK was developed over the past few years, as demand grew for more user-friendly orchestration tools. Astronomer has been active in the Airflow ecosystem since its founding in 2018, and the SDK is part of that ongoing effort.
 
-**Por que surgiu**
-Principalmente para resolver dois desafios recorrentes de quem usa Airflow no dia a dia:
+**Why it came about**
+Mainly to solve two recurring challenges faced by people who use Airflow day to day:
 
-1. **Complexidade do Airflow** — escrever DAGs diretamente com a API "crua" do Airflow exige lidar com bastante boilerplate (XComs, operadores, dependências explícitas).
-2. **Eficiência no desenvolvimento** — o SDK abstrai parte dessa complexidade, permitindo escrever lógica de ETL de forma mais declarativa.
+1. **Airflow's complexity** — writing DAGs directly with Airflow's "raw" API requires dealing with a lot of boilerplate (XComs, operators, explicit dependencies).
+2. **Development efficiency** — the SDK abstracts away part of that complexity, allowing ETL logic to be written in a more declarative way.
 
-## Licença
+## License
 
-O Astro Python SDK é **open-source** — está disponível publicamente e pode ser usado, modificado e distribuído livremente.
+The Astro Python SDK is **open source** — it's publicly available and can be used, modified, and distributed freely.
 
-Documentação oficial: [astronomer.io/docs/learn/astro-python-sdk-etl](https://www.astronomer.io/docs/learn/astro-python-sdk-etl)
+Official documentation: [astronomer.io/docs/learn/astro-python-sdk-etl](https://www.astronomer.io/docs/learn/astro-python-sdk-etl)
 
 ---
 
-## Instalação do Astro CLI
+## Installing the Astro CLI
 
-O **Astro CLI** é a ferramenta de linha de comando usada para criar, rodar e gerenciar projetos Astro (incluindo Airflow local) na máquina.
+The **Astro CLI** is the command-line tool used to create, run, and manage Astro projects (including local Airflow) on your machine.
 
-Guia oficial de instalação: [astronomer.io/docs/astro/cli/install-cli](https://www.astronomer.io/docs/astro/cli/install-cli?tab=windowswithwinget#install-the-astro-cli)
+Official installation guide: [astronomer.io/docs/astro/cli/install-cli](https://www.astronomer.io/docs/astro/cli/install-cli?tab=windowswithwinget#install-the-astro-cli)
 
-### Passo 1 — Instalar via winget (Windows)
+### Step 1 — Install via winget (Windows)
 
-No PowerShell, execute:
+In PowerShell, run:
 
 ```powershell
 winget install -e --id Astronomer.Astro
 ```
 
-Confirme os termos digitando `y` quando solicitado. O winget faz o download do instalador, verifica o hash e adiciona o alias `astro` ao PATH.
+Confirm the terms by typing `y` when prompted. Winget downloads the installer, verifies the hash, and adds the `astro` alias to the PATH.
 
 <img src="https://github.com/JosiTubaroski/Apache_Airflow_P_2/blob/main/img/Instacao_astro_2.png">
 
-> Após a instalação, reinicie o terminal para que a variável de ambiente `PATH` seja atualizada.
+> After installation, restart the terminal so the `PATH` environment variable is updated.
 
-### Passo 2 — Verificar a instalação
+### Step 2 — Verify the Installation
 
-Dentro da pasta do seu projeto, rode:
+Inside your project folder, run:
 
 ```powershell
 astro
 ```
 
-Se a instalação foi bem-sucedida, o CLI exibe a arte ASCII de boas-vindas e a mensagem de introdução ao Astro CLI.
+If the installation was successful, the CLI displays the welcome ASCII art and the introductory message for the Astro CLI.
 
 <img src="https://github.com/JosiTubaroski/Apache_Airflow_P_2/blob/main/img/Confirmacao_Astro.png">
 
-### Passo 3 — Inicializar o projeto Astro
+### Step 3 — Initialize the Astro Project
 
-Ainda no diretório do projeto, execute:
+Still inside the project directory, run:
 
 ```powershell
 astro dev init
 ```
 
-Esse comando baixa os arquivos de desenvolvimento do Airflow Runtime e inicializa a estrutura padrão de um projeto Astro (Dockerfile, `packages.txt`, `requirements.txt`, `airflow_settings.yaml`, pasta `dags/`, `tests/`, etc.).
+This command downloads the Airflow Runtime development files and initializes the standard structure of an Astro project (Dockerfile, `packages.txt`, `requirements.txt`, `airflow_settings.yaml`, the `dags/` folder, `tests/`, etc.).
 
 <img src="https://github.com/JosiTubaroski/Apache_Airflow_P_2/blob/main/img/Astro_Dev_Init.png">
 
-### Estrutura gerada pelo `astro dev init`
+### Structure Generated by `astro dev init`
 
-| Arquivo/Pasta | Função |
+| File/Folder | Function |
 |---|---|
-| `Dockerfile` | Define a imagem base do Airflow usada no ambiente local |
-| `requirements.txt` | Dependências Python do projeto (ex: `astro-sdk-python`) |
-| `packages.txt` | Pacotes de sistema (apt) necessários no container |
-| `airflow_settings.yaml` | Connections, Variables e Pools pré-configurados localmente |
-| `dags/` | Onde ficam os arquivos de DAGs do projeto |
-| `tests/` | Testes automatizados das DAGs |
-| `.env` | Variáveis de ambiente locais |
+| `Dockerfile` | Defines the base Airflow image used in the local environment |
+| `requirements.txt` | The project's Python dependencies (e.g., `astro-sdk-python`) |
+| `packages.txt` | System (apt) packages required inside the container |
+| `airflow_settings.yaml` | Connections, Variables, and Pools pre-configured locally |
+| `dags/` | Where the project's DAG files live |
+| `tests/` | Automated tests for the DAGs |
+| `.env` | Local environment variables |
 
-### Próximos passos após inicializar
+### Next Steps After Initializing
 
 ```powershell
 astro dev start
 ```
 
-Sobe o ambiente Airflow local (webserver, scheduler, banco) via Docker, usando a estrutura criada pelo `astro dev init`.
+Brings up the local Airflow environment (webserver, scheduler, database) via Docker, using the structure created by `astro dev init`.
 
-| Comando | O que faz |
+| Command | What It Does |
 |---|---|
-| `astro dev start` | Sobe o ambiente Airflow local |
-| `astro dev stop` | Para o ambiente sem remover os containers |
-| `astro dev restart` | Reinicia o ambiente (útil após alterar `requirements.txt`) |
-| `astro dev kill` | Remove os containers e volumes do ambiente local |
-| `astro dev logs` | Exibe os logs do ambiente local |
+| `astro dev start` | Brings up the local Airflow environment |
+| `astro dev stop` | Stops the environment without removing the containers |
+| `astro dev restart` | Restarts the environment (useful after changing `requirements.txt`) |
+| `astro dev kill` | Removes the local environment's containers and volumes |
+| `astro dev logs` | Displays the local environment's logs |
 
 ---
 
-## Astro Python SDK no desenvolvimento de ETL
+## The Astro Python SDK in ETL Development
 
-O Astro Python SDK é especialmente útil para processos **ETL (Extract, Transform, Load)** no Airflow, sobretudo quando combinado à plataforma Astro para observabilidade e gerenciamento.
+The Astro Python SDK is especially useful for **ETL (Extract, Transform, Load)** processes in Airflow, particularly when combined with the Astro platform for observability and management.
 
 ```mermaid
 flowchart LR
-    A["Astro CLI<br/>(ambiente local)"] --> B["DAGs com<br/>Astro Python SDK"]
-    B --> C["Apache Airflow<br/>(orquestração)"]
-    C --> D["Métricas de desempenho<br/>e logs"]
-    C --> E["Métricas personalizadas<br/>do pipeline ETL"]
-    D --> F["Plataforma Astro<br/>(observabilidade)"]
+    A["Astro CLI<br/>(local environment)"] --> B["DAGs with<br/>Astro Python SDK"]
+    B --> C["Apache Airflow<br/>(orchestration)"]
+    C --> D["Performance metrics<br/>and logs"]
+    C --> E["Custom ETL<br/>pipeline metrics"]
+    D --> F["Astro Platform<br/>(observability)"]
     E --> F
 ```
 
-### 1. Monitoramento e observabilidade
+### 1. Monitoring and Observability
 
-O Airflow orquestra os workflows de ETL, e o Astro Python SDK melhora a observabilidade desses workflows:
+Airflow orchestrates the ETL workflows, and the Astro Python SDK improves the observability of these workflows:
 
-- **Métricas de desempenho** — tempo de execução, sucesso/falha das tarefas e outros indicadores das DAGs.
-- **Logs e alertas** — envio de logs detalhados e eventos de erro para a plataforma Astro, ajudando a identificar e corrigir problemas rapidamente (falhas de tarefas, tempos de execução anômalos, etc.).
+- **Performance metrics** — execution time, task success/failure, and other DAG indicators.
+- **Logs and alerts** — sending detailed logs and error events to the Astro platform, helping to identify and fix problems quickly (task failures, anomalous execution times, etc.).
 
-### 2. Coleta de dados e métricas personalizadas
+### 2. Data Collection and Custom Metrics
 
-Durante o desenvolvimento dos pipelines ETL, é possível definir **métricas personalizadas** relevantes para o fluxo de trabalho e enviá-las para a plataforma Astro para análises mais aprofundadas.
+During ETL pipeline development, it's possible to define **custom metrics** relevant to the workflow and send them to the Astro platform for deeper analysis.
 
-Integrar o Astro Python SDK ao ambiente Airflow adiciona uma camada de monitoramento e controle sobre os processos ETL, contribuindo para a qualidade e confiabilidade dos pipelines de dados.
+Integrating the Astro Python SDK into the Airflow environment adds a layer of monitoring and control over ETL processes, contributing to the quality and reliability of data pipelines.
 
 ---
 
-## Referências
+## References
 
-- [Documentação do Astro Python SDK para ETL](https://www.astronomer.io/docs/learn/astro-python-sdk-etl)
-- [Instalação do Astro CLI](https://www.astronomer.io/docs/astro/cli/install-cli?tab=windowswithwinget#install-the-astro-cli)
-- [Repositório oficial astro-sdk (GitHub)](https://github.com/astronomer/astro-sdk)
+- [Astro Python SDK Documentation for ETL](https://www.astronomer.io/docs/learn/astro-python-sdk-etl)
+- [Astro CLI Installation](https://www.astronomer.io/docs/astro/cli/install-cli?tab=windowswithwinget#install-the-astro-cli)
+- [Official astro-sdk Repository (GitHub)](https://github.com/astronomer/astro-sdk)
